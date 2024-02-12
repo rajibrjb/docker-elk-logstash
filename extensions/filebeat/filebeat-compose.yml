@@ -18,6 +18,7 @@ services:
       - --strict.perms=false
     volumes:
       - ./extensions/filebeat/config/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro,Z
+      - /var/www/jeg-laravel-core/storage/logs:/usr/share/filebeat/logs
       - type: bind
         source: /var/lib/docker/containers
         target: /var/lib/docker/containers
